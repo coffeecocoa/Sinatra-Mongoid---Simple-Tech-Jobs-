@@ -1,0 +1,27 @@
+.page-header
+  %h2
+    = @job.title
+    \:
+    %small= @job.company
+/ <img src="http://placehold.it/180x90&text=company+logo">
+%div{:id => "job details", :style => "margin-top:20px;"}
+  %p
+    %b Title/Role
+    = @job.title
+  %p
+    %b Company Name
+    = @job.company
+  %p
+    %b Website
+    = @job.website
+  %p
+    %b Job Description
+    = @job.description
+  %p
+    %b Date Posted:
+    %i.icon-calendar
+    = @job.created_at
+  %p
+    %a.btn.btn-primary.btn-small{:href => "mailto:#{@job.contact_email}?subject=#{@job.title}"} Apply for this Job
+  %p
+    %a.btn.btn-primary.btn-small{:href => "/edit/#{@job._id}"} Edit this Job

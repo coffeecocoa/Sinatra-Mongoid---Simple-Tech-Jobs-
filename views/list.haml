@@ -1,0 +1,23 @@
+%h2 Job List
+%table.table
+  %thead
+    %tr
+      %th Title/Role
+      %th Company
+      %th Job Description
+      %th Website
+      %th Actions
+  %tbody
+    %tr
+      - @jobs.each_with_index do |job,i|
+        <tr#{'class="alt"' if i%10==0}>
+        %td
+          %a{:href => "/show/#{job._id}"}= job.title
+        %td= job.company
+        %td= job.description
+        %td
+          %a{:href => "http://#{job.website}"}= job.website
+        %td
+          %a{:href => "mailto:#{job.contact_email}?subject=#{job.title}"}
+            Apply
+            %i.icon-envelope

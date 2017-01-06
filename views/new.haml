@@ -1,0 +1,26 @@
+%form#ad.form-horizontal{:action => "/create", :enctype => "multipart/form-data", :method => "post"}
+  %h2 Create a New Job
+  %fieldset
+    .control-group
+      %label.control-label Title/Role
+      .controls
+        %input#input.span6{:name => "job[title]", :placeholder => "Job Title", :type => "text"}/
+    .control-group
+      %label.control-label Company Name
+      .controls
+        %input#input.span6{:name => "job[company]", :placeholder => "Company Name", :type => "text"}/
+    .control-group
+      %label.control-label Website
+      .controls
+        %input#url.span6{:name => "job[website]", :placeholder => "Website", :type => "text"}/
+    .control-group
+      %label.control-label Job Description
+      .controls
+        %textarea#input.input-block-level{:name => "job[description]", :placeholder => "Put something awesome here that describes how your new team member will spend his/her day.", :rows => "6"}
+    .control-group
+      %label.control-label Contact Email
+      .controls
+        %input#url.span6{:name => "job[contact_email]", :placeholder => "Email Address where you want to receive resumes.", :type => "text"}/
+    .control-group
+      .controls
+        %button.btn.btn-large{:type => "submit"} Create

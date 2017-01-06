@@ -1,0 +1,29 @@
+.row-fluid{:style => "margin-top:25px;"}
+  / Big Header Text
+  .row-fluid
+    %h1.text-center
+      Tech is hot.  Lots of jobs.
+      %br/
+      %h5.text-center You can find them and post them here.
+  / For Boxes
+  .row-fluid{:style => "margin-top:20px;"}
+    .span4
+    / .well.media.span4
+    /   %a.pull-left{:href => "#"}
+    /     %i.icon-building.icon-4x
+    /   .media-body
+    /     %h4.media-heading For Companies:
+    /     %p Defined as: A 'Group' of people trying to hire another person to work with them.
+    /   %a.btn.btn-block.btn-success{:href => "/signup"}
+    /     %i.icon-pushpin.icon-large
+    /     \  Sign up and Post Jobs
+    .well.media.span4
+      %a.pull-left{:href => "#"}
+        %i.icon-user.icon-4x
+      .media-body
+        %h4.media-heading For Job Seekers:
+        %p Click this link to see list of jobs.
+      %a.btn.btn-block.btn-success{:href => "/list"}
+        %i.icon-search.icon-large
+        \  Find Your Job
+    .span4
